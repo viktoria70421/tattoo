@@ -8,3 +8,6 @@
 - composer self-update
 - composer install
 - запустить сайт
+
+Добавлена новая ветка user1
+дополнительная информация
