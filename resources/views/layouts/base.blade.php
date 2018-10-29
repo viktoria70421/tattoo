@@ -42,16 +42,9 @@
               <a class="nav-link" href="{{asset('/contact')}}">Contact</a>			  
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Portfolio
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="{{ asset('/portfolio-1-col')}}">1 Column Portfolio</a>				
-                <a class="dropdown-item" href="{{ asset('/portfolio-2-col')}}">2 Column Portfolio</a>
-                <a class="dropdown-item" href="{{ asset('/portfolio-3-col')}}">3 Column Portfolio</a>
-                <a class="dropdown-item" href="{{ asset('/portfolio-5-col')}}">4 Column Portfolio</a>
-                <a class="dropdown-item" href="{{ asset('/portfolio-item')}}">Single Portfolio Item</a>
-              </div>
+              <a class="nav-link" href='{{asset('categories')}}'">
+                Товары
+              </a>             
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
