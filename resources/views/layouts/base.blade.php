@@ -42,7 +42,7 @@
               <a class="nav-link" href="{{asset('/contact')}}">Contact</a>			  
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href='{{asset('categories')}}'">
+              <a class="nav-link" href="{{asset('categories')}}">
                 Товары
               </a>             
             </li>
@@ -70,6 +70,9 @@
             </li>
           </ul>
 		  <ul class="navbar-nav ml-auto">
+		                    <li class="nav-item">
+                                <a class="nav-link" href="{{ asset('basket/all') }}">Корзина</a>
+                            </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

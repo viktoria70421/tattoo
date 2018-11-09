@@ -20,4 +20,9 @@ Route::get ('/', 'BaseController@getIndex');
 
 Route::get ('categories', 'TovarController@getAll');
 
-Route::get ('/{url}', 'PageController@getIndex');
+Route::get('basket/all','BasketController@getAll');
+Route::get ('basket/add/{id}', 'BasketController@getAdd');
+Route::get ('basket/del/{id}', 'BasketController@getDelete');
+Route::post('order', 'OrderController@postIndex');
+
+Route::get ('/{url}', 'PageController@getIndex'); //default

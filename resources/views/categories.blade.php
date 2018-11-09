@@ -10,12 +10,14 @@
                 <div class="card-body">
                     
 					@foreach($cats as $cat)
+					<hr />
 					<h2 class='title'> {{$cat->name}}</h2>
 					
 					@foreach($cat->products()->get() as $one)
 					<h4>{{$one->name}}</h4>
+					<a href="{{asset('basket/add/'.$one->id)}}" class="">В корзину</a>
 					@if($one->picture!='')
-					<img src="{{asset('uploads/'.$one->picture)}}"></img>
+					<img src="{{asset('uploads/'.$one->picture)}}" />
 					@endif
 					
 						{!!$one->body!!}
