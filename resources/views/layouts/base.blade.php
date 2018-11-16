@@ -24,7 +24,7 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" id="picture">
       <div class="container">
         <a class="navbar-brand" href="{{asset('/')}}">Start Bootstrap</a>		
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,21 +33,21 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('/about')}}">About</a>
+              <a class="nav-link" data-name='About' data-body='text1' data-color='#4b78bb' href="{{asset('/about')}}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('/services')}}">Services</a>
+              <a class="nav-link" data-name='Services' data-body='text2' data-color='#9786bd' href="{{asset('/services')}}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('/contact')}}">Contact</a>			  
+              <a class="nav-link" data-name='Contact' data-body='text3' data-color='#296635' href="{{asset('/contact')}}">Contact</a>			  
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="{{asset('categories')}}">
+              <a class="nav-link" data-name='Товары' data-body='text4' data-color='#2a456e' href="{{asset('categories')}}">
                 Товары
               </a>             
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" data-name='Blog' data-body='text5' data-color='#7c2d1b' href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -57,7 +57,7 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" data-name='Other Pages' data-body='text6' data-color='#d44f68' href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Other Pages
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -106,7 +106,12 @@
         </div>
       </div>
     </nav>
-
+	
+    <!-- блок после меню -->
+	<div class="formenu"> 
+		<div id='name'></div>
+	    <div id='body'></div>
+	</div>
       @yield("content")
 
     <!-- Footer -->
@@ -120,7 +125,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+@section('scripts')
+<script src="{{asset('js/main.js')}}"></script>
+@show
   </body>
 
 </html>
