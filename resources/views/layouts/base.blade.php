@@ -16,7 +16,7 @@
     <!-- Custom styles for this template -->
 	
 	@section('styles')
-	    <link href="{{ asset('/css/modern-business.css ')}}" rel="stylesheet">
+	    <link href="{{ asset('./public/css/modern-business.css ')}}" rel="stylesheet">
 	@show
 
   </head>
@@ -24,7 +24,8 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" id="picture">
+	
+    <nav id="picture" class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" >	
       <div class="container">
         <a class="navbar-brand" href="{{asset('/')}}">Start Bootstrap</a>		
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" data-name='About' data-body='text1' data-color='#4b78bb' href="{{asset('/about')}}">About</a>
+              <a class="nav-link" data-name='About' data-body='text1' data-color='#4b78bb' href="{{asset('/about')}}">About</a>			  
             </li>
             <li class="nav-item">
               <a class="nav-link" data-name='Services' data-body='text2' data-color='#9786bd' href="{{asset('/services')}}">Services</a>
@@ -67,6 +68,11 @@
                 <a class="dropdown-item" href="{{asset('/404')}}">404</a>
                 <a class="dropdown-item" href="{{asset('/pricing')}}">Pricing Table</a>
               </div>
+			  <!-- блок после меню -->
+	          <div class="formenu"> 
+		         <div id='name'></div>
+	             <div id='body'></div>
+	          </div>
             </li>
           </ul>
 		  <ul class="navbar-nav ml-auto">
@@ -107,11 +113,7 @@
       </div>
     </nav>
 	
-    <!-- блок после меню -->
-	<div class="formenu"> 
-		<div id='name'></div>
-	    <div id='body'></div>
-	</div>
+    
       @yield("content")
 
     <!-- Footer -->
@@ -126,7 +128,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 @section('scripts')
-<script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/main.js')}}" type="text/javascript"></script>
 @show
   </body>
 

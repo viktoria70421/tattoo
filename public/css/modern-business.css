@@ -6,13 +6,28 @@
 
 body {
   padding-top: 54px;
+
 }
+
+
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
 }
+
+#picture{
+	background-color: #343a40;
+
+}
+
+.formenu{
+	padding:15px 0px 20px 00px; 
+	position: absolute;
+		
+}
+
 
 .carousel-item {
   height: 65vh;
